@@ -2,17 +2,19 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
+$router->get('/get', function(){
+    return 'i am get method of api routing';
+});
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+
+$router->post('/post',function (){
+    return 'i am post method of api routing';
+});
+
+$router->put('/put',function (){
+    return 'i am put method of api routing';
+});
+
+$router->delete('/delete',function (){
+    return 'i am delete method of api routing';
 });
